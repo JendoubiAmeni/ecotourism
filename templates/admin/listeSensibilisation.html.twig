@@ -1,0 +1,71 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Liste des Sensibilisations{% endblock %}
+
+{% block body %}
+    <div class="content-page">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Sensibilisations</a></li>
+                                    <li class="breadcrumb-item active">Liste</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Liste des Sensibilisations</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box table-responsive">
+                            <h4 class="header-title">Informations sur les Sensibilisations</h4>
+                            <p class="sub-header">
+                                Affichage des informations sur les sensibilisations.
+                            </p>
+
+                            <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Titre</th>
+                                        <th>Description</th>
+                                        <th>Quiz associé</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <!-- Remplacez les données suivantes par les informations réelles de vos sensibilisations -->
+                                    <tr>
+                                        <td>Sensibilisation 1</td>
+                                        <td>Description de la sensibilisation 1.</td>
+                                        <td>Quiz associé 1</td>
+                                        <td>
+                                            <button class="btn btn-warning">Modifier</button>
+                                            <button class="btn btn-danger">Supprimer</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sensibilisation 2</td>
+                                        <td>Description de la sensibilisation 2.</td>
+                                        <td>Quiz associé 2</td>
+                                        <td>
+                                            <button class="btn btn-warning">Modifier</button>
+                                            <button class="btn btn-danger">Supprimer</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Ajoutez plus de lignes selon vos besoins -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

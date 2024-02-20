@@ -1,0 +1,80 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}liste des participants {% endblock %}
+
+{% block body %}
+           <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+          <div class="content-page">
+    <div class="content">
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Evénements</a></li>
+                                <li class="breadcrumb-item active">Liste</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Liste des événements</h4>
+                    </div>
+                </div>
+            </div>     
+            <!-- end page title --> 
+
+        <div class="row">
+    <div class="col-12">
+        <div class="card-box">
+            <h4 class="header-title">Liste des Événements</h4>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>N° </th>
+                            <th>Nom complet</th>
+                            <th>Nom de l'événement</th>
+                        
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      {% if Participant is defined and Participant | length > 0 %}
+                       {% for row in Participant %}
+                        <tr>
+                            <td>{{row.id}}</td>
+                            <td>{{row.fullname}}</td>
+                            <td>{{row.evenements}}</td>
+                       
+                          {# admin_update_evenement #}
+                            <td>
+                               
+                                <a href="{{ path('delete_adh',{'id':row.id}) }}" class="btn btn-danger">Supprimer</a>
+                            </td>
+                        </tr>
+                      {% endfor %}
+                     {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- end row -->
+        </div> <!-- end container-fluid -->
+    </div> <!-- end content -->
+</div>
+
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+   {% endblock %}

@@ -1,0 +1,168 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participation | Écotourisme{% endblock %}
+
+{% block body %}
+   {% if singleEvent is defined and singleEvent | length > 0 %}
+    
+ 
+<style>
+.sp-image{
+	width: 400 px !important;
+	height: 300 px !important;
+}
+</style>
+   <section class="parallax-window" data-parallax="scroll" style="" data-natural-width="1400" data-natural-height="50">
+    <div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.4)">
+        <div class="animated fadeInDown">
+            <h1>{{singleEvent.Name}}</h1>
+          
+        </div>
+    </div>
+</section>
+
+	<main>
+		<div id="position">
+			<div class="container">
+				<ul>
+					<li><a href="#">Home</a>
+					</li>
+					<li><a href="#">Category</a>
+					</li>
+					<li>Page active</li>
+				</ul>
+			</div>
+		</div>
+		<!-- End Position -->
+
+		<div class="collapse" id="collapseMap">
+			<div id="map" class="map"></div>
+		</div>
+		<!-- End Map -->
+
+		<div class="container margin_60">
+			<div class="row">
+				<div class="col-lg-8" id="single_tour_desc">
+					
+				
+                  
+					<!-- Map button for tablets/mobiles -->
+					<div id="Img_carousel" class="slider-pro">
+						<div class="sp-slides">
+
+							<div class="sp-slide">
+								<img alt="Image" class="sp-image" src="{{ asset ('uploads/images/' ~ singleEvent.image) }}" width="300" height="200">
+							</div>
+						
+
+						</div>
+						<div class="sp-thumbnails">
+							<img alt="Image" class="sp-thumbnail" src="{{ asset ('uploads/images/' ~ singleEvent.image) }}">
+
+						</div>
+					</div>
+
+					<hr>
+
+				
+					<hr>
+
+					<div class="row">
+						<div class="col-lg-3">
+							<h3>Description</h3>
+						</div>
+						<div class="col-lg-9">
+							<p>
+								{{singleEvent.description}}
+							</p>
+							<h4>Lieu</h4>
+						
+							<div class="row">
+								<div class="col-md-6">
+									<ul class="list_ok">
+										<li>{{singleEvent.lieu}}</li>
+										
+									</ul>
+								</div>
+						
+							</div>
+							<h4>Prix</h4>
+						
+							<div class="row">
+								<div class="col-md-6">
+									<ul class="list_ok">
+										<li>{{singleEvent.prixA}} DT</li>
+										
+									</ul>
+								</div>
+						
+							</div>
+                            	<h4>Durée</h4>
+							<div class="row">
+								<div class="col-md-6">
+									<ul class="list_ok">
+										<li>{{singleEvent.duree}} Minutes</li>
+										
+									</ul>
+								</div>
+							
+							</div>
+							<!-- End row  -->
+						</div>
+						<!-- End col-md-9  -->
+					</div>
+					<!-- End row  -->
+
+					<hr>
+
+					
+
+				   
+				</div>
+				<!--End  single_tour_desc-->
+
+				<aside class="col-lg-4">
+				 
+					<div class="box_style_1 expose">
+						<h3 class="inner">Inscription à l'événement</h3>
+                        {{form_start(formParticipant,{'attr' :{'novalidate':'novalidate'}})}}
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+                               
+									<label><i class="icon-user"></i> Nom complet</label>
+									{# <input class="date-pick form-control" type="text" placeholder="votre nom complet"> #}
+                                   {{form_widget(formParticipant.fullname,{'attr' :{'class':'form-control','placeholder':'votre nom complet'}})}}
+								</div>
+							</div>
+						</div>
+					
+						<br>
+                            {{form_widget(formParticipant.participater,{'attr' :{'class':'btn_full'}})}}
+						
+						{{ form_end(formParticipant) }}
+					</div>
+                  
+					<!--/box_style_1 -->
+
+					<div class="box_style_4">
+						<i class="icon_set_1_icon-90"></i>
+						<h4><span>Book</span> by phone</h4>
+						<a href="tel://004542344599" class="phone">+216 423 445 99</a>
+						<small>Monday to Friday 9.00am - 7.30pm</small>
+					</div>
+
+				</aside>
+			</div>
+			<!--End row -->
+		</div>
+		<!--End container -->
+        
+        <div id="overlay"></div>
+		<!-- Mask on input focus -->
+    
+	</main>
+
+    {% endif %}
+	<!-- End main -->
+    {% endblock %}

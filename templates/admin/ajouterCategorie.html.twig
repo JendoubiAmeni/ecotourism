@@ -1,0 +1,77 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Ajouter Catégorie {% endblock %}
+
+{% block body %}
+       <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Formulaire</a></li>
+                                        <li class="breadcrumb-item active">Produits</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Formulaire d'ajout de catégorie</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box">
+                               
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="demo-box">
+                                                <div class="form-group">
+                                                    <p>Intitulé du Catégorie</p>
+                                                    <input type="text" name="productName" id=""
+                                                        class="form-control">
+                                                </div>
+                                                
+                                              
+                                        </div>
+                                    </div>
+
+                                </div> 
+                                         <div class="form-group text-right mb-0">
+                                            <button class="btn btn-primary waves-effect waves-light mr-1" type="submit">
+                                                Ajouter
+                                            </button>
+                                            <button type="reset" class="btn btn-secondary waves-effect waves-light">
+                                                Annuler
+                                            </button>
+                                        </div>
+                            </div> <!-- end card-box -->
+                        </div> <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                                       
+                </div> <!-- end container-fluid -->
+
+            </div> <!-- end content -->
+
+
+
+         
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+{% endblock %}

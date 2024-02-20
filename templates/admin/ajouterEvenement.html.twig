@@ -1,0 +1,98 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Ajouter un Événement | Admin {% endblock %}
+
+{% block body %}
+<div class="content-page">
+    <div class="content">
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Événement</a></li>
+                                <li class="breadcrumb-item active">Ajouter</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Ajouter un Événement</h4>
+                    </div>
+                </div>
+            </div>     
+            <!-- end page title --> 
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card-box">
+                        <h4 class="header-title">Formulaire d'Ajout d'Événement</h4>
+                        <p class="sub-header">
+                            Remplissez les informations pour ajouter un nouvel événement.
+                        </p>
+                     {{form_start(eventForm,{'attr' :{'novalidate':'novalidate'}})}}
+                    
+                          <div class="eventForm-group">
+                                <label for="nomEvenement">Nom de l'Événement</label>
+                                  {{form_widget(eventForm.name,{'attr' :{'class':'form-control','placeholder':'Entrez le nom de l\'événement'}})}}
+                                {{form_errors(eventForm)}}
+                            </div>
+                         <div class="form-group">
+                             <label for="dateEvenement">Date de l'Événement</label>
+                                  {{form_widget(eventForm.date,{'attr' :{'class':'form-control','placeholder':'Entrez la durée'}})}}
+                                   {{form_errors(eventForm)}}
+                            </div>
+                         <div class="form-group">
+                                <label for="dateEvenement">Durée</label>
+                                  {{form_widget(eventForm.duree,{'attr' :{'class':'form-control','placeholder':'Durée (en minutes)'}})}}
+                                  {{form_errors(eventForm)}}
+                            </div>
+                         <div class="form-group">
+                                <label for="dateEvenement">Prix</label>
+                                  {{form_widget(eventForm.prixA,{'attr' :{'class':'form-control','placeholder':'Entrez le prix'}})}}
+                                 {{form_errors(eventForm)}}
+                            </div>
+                         <div class="form-group">
+                                <label for="descriptionEvenement">Description de l'Événement</label>
+                                  {{form_widget(eventForm.description,{'attr' :{'class':'form-control','placeholder':'Description de l\'Événement'}})}}
+                                     {{form_errors(eventForm)}}
+                            </div>
+                         <div class="form-group">
+                                <label for="lieuEvenement">Lieu de l'Événement</label>
+                                  {{form_widget(eventForm.lieu,{'attr' :{'class':'form-control','placeholder':'Lieu de l\'Événement'}})}}
+                                     {{form_errors(eventForm)}}
+                            </div>
+                         <div class="form-group">
+                         <div class="form-group">
+                                <label for="lieuEvenement">Image</label><br>
+                                  {{form_widget(eventForm.image,{'attr' :{'class':'fileStyle btn-primary','placeholder':'Image'}})}}
+                            
+                            </div>
+                         <div class="form-group">
+                           
+                                  {{form_widget(eventForm.submit,{'attr' :{'class':'btn btn-primary'}})}}
+                            </div>
+                            {# <div class="form-group">
+                                <label for="typeEvenement">Type de l'Événement</label>
+                                <select class="form-control" id="typeEvenement" required>
+                                    <option value="conference">Conférence</option>
+                                    <option value="concert">Concert</option>
+                                    <option value="exposition">Exposition</option>
+                                    <!-- Ajoutez d'autres types selon vos besoins -->
+                                </select>
+                            </div> #}
+                       {{ form_end(eventForm) }}
+                      
+
+                    
+                    </div>
+                </div>
+            </div>
+           
+            
+        </div> <!-- end container-fluid -->
+    </div> <!-- end content -->
+</div>
+
+{% endblock %}

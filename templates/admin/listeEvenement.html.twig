@@ -1,0 +1,87 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}liste des produits {% endblock %}
+
+{% block body %}
+           <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+          <div class="content-page">
+    <div class="content">
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Evénements</a></li>
+                                <li class="breadcrumb-item active">Liste</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Liste des événements</h4>
+                    </div>
+                </div>
+            </div>     
+            <!-- end page title --> 
+
+        <div class="row">
+    <div class="col-12">
+        <div class="card-box">
+            <h4 class="header-title">Liste des Événements</h4>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Lieu</th>
+                            <th>Durée</th>
+                            
+                            <th>prixA</th>
+                            <th>Image</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      {% if Evenement is defined and Evenement | length > 0 %}
+                       {% for row in Evenement %}
+                        <tr>
+                            <td>{{row.name}}</td>
+                            <td>{{row.date | date('d-m-Y')}}</td>
+                            <td>{{row.description}}</td>
+                            <td>{{row.lieu}}</td>
+                            <td>{{row.duree}}</td>
+                            <td>{{row.prixA}}</td>
+                            <td><img src="{{ asset ('uploads/images/' ~ row.image) }}"   width="50" height="50" /></td>
+                          {# admin_update_evenement #}
+                            <td>
+                                <a href="{{ path('admin_update_evenement',{'id':row.id}) }}" class="btn btn-warning">Modifier</a>
+                                <a href="{{ path('admin_delete_evenement',{'id':row.id}) }}" class="btn btn-danger">Supprimer</a>
+                            </td>
+                        </tr>
+                      {% endfor %}
+                     {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- end row -->
+        </div> <!-- end container-fluid -->
+    </div> <!-- end content -->
+</div>
+
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+   {% endblock %}

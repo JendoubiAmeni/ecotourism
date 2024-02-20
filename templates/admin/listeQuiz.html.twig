@@ -1,0 +1,71 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Liste des Quiz{% endblock %}
+
+{% block body %}
+    <div class="content-page">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Quiz</a></li>
+                                    <li class="breadcrumb-item active">Liste</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Liste des Quiz</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box table-responsive">
+                            <h4 class="header-title">Informations sur les Quiz</h4>
+                            <p class="sub-header">
+                                Affichage des informations sur les quiz éducatifs.
+                            </p>
+
+                            <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Question</th>
+                                        <th>Options</th>
+                                        <th>Réponse Correcte</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <!-- Remplacez les données suivantes par les informations réelles de vos quiz -->
+                                    <tr>
+                                        <td>Question 1</td>
+                                        <td>Option 1, Option 2, Option 3</td>
+                                        <td>Réponse 1</td>
+                                        <td>
+                                            <button class="btn btn-warning">Modifier</button>
+                                            <button class="btn btn-danger">Supprimer</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Question 2</td>
+                                        <td>Option 1, Option 2, Option 3, Option 4</td>
+                                        <td>Réponse 2</td>
+                                        <td>
+                                            <button class="btn btn-warning">Modifier</button>
+                                            <button class="btn btn-danger">Supprimer</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Ajoutez plus de lignes selon vos besoins -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

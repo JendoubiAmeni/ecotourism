@@ -1,0 +1,90 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Ajouter Sensibilisation/Education | Admin {% endblock %}
+
+{% block body %}
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Sensibilisation/Education</a></li>
+                                    <li class="breadcrumb-item active">Ajouter</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Ajouter Sensibilisation/Education</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box">
+                            <h4 class="header-title">Formulaire de Sensibilisation/Education</h4>
+                            <p class="sub-header">
+                                Le formulaire ci-dessous vous permet d'ajouter des informations sur la sensibilisation et
+                                l'éducation.
+                            </p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <form method="post" class="form-horizontal">
+                                        <!-- Ajoutez les champs spécifiques pour la sensibilisation et l'éducation -->
+                                        <div class="form-group row">
+                                            <label class="col-md-2 col-form-label" for="titre">Titre</label>
+                                            <div class="col-md-10">
+                                                <input type="text" id="titre" name="titre" class="form-control" placeholder="Entrez le titre...">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="col-md-2 col-form-label" for="description">Description</label>
+                                            <div class="col-md-10">
+                                                <textarea name="description" id="description" class="form-control" rows="5" placeholder="Entrez une description..."></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!-- Ajoutez le champ de sélection pour les quizzes -->
+                                        <div class="form-group row">
+                                            <label class="col-md-2 col-form-label" for="quiz">Quiz</label>
+                                            <div class="col-md-10">
+                                                <select class="form-control" id="quiz" name="quiz">
+                                                    <option value="1">Quiz 1</option>
+                                                    <option value="2">Quiz 2</option>
+                                                    <!-- Ajoutez dynamiquement les options en fonction de la liste des quizzes -->
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Ajoutez d'autres champs au besoin -->
+
+                                        <div class="form-group text-right mb-0">
+                                            <button class="btn btn-primary waves-effect waves-light mr-1" type="submit">
+                                                Ajouter
+                                            </button>
+                                            <button type="reset" class="btn btn-secondary waves-effect waves-light">
+                                                Annuler
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- end row -->
+                        </div> <!-- end card-box -->
+                    </div><!-- end col -->
+                </div>
+
+                <!-- end row -->
+            </div> <!-- end container-fluid -->
+        </div> <!-- end content -->
+    </div>
+{% endblock %}

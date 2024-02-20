@@ -1,0 +1,100 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Liste des Avis {% endblock %}
+
+{% block body %}
+   <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+        <div class="content">
+            <!-- Start Content-->
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Avis</a></li>
+                                    <li class="breadcrumb-item active">Liste</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Liste des avis</h4>
+                        </div>
+                    </div>
+                </div>     
+                <!-- end page title --> 
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box table-responsive">
+                            <h4 class="header-title">Informations sur les Avis</h4>
+                            <p class="sub-header">Affichage des informations sur les avis saisis.</p>
+
+                            <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Utilisateur</th>
+                                        <th>Voyage</th>
+                                        <th>Produit</th>
+                                        <th>Événement</th>
+                                        <th>Guide de Voyage</th>
+                                        <th>Note</th>
+                                        <th>Commentaire</th>
+                                        <th>Actions</th>
+                                      
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <!-- Remplacez les données suivantes par les informations réelles de vos avis -->
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Utilisateur 1</td>
+                                        <td>Voyage 1</td>
+                                        <td>Produit A</td>
+                                        <td>Événement 1</td>
+                                        <td>Guide A</td>
+                                        <td>4.5</td>
+                                        <td>Très bon produit!</td>
+                                        <td>
+                                            <button class="btn btn-info">Restreindre</button>
+                                           
+                                        </td>
+                                      
+                                        <!-- Ajoutez plus de colonnes selon vos besoins -->
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Utilisateur 2</td>
+                                        <td>Voyage 2</td>
+                                        <td>Produit B</td>
+                                        <td>Événement 2</td>
+                                        <td>Guide B</td>
+                                        <td> 2.7</td>
+                                        <td>Bonne expérience!</td>
+                                        <td>
+                                              <button class="btn btn-info">Restreindre</button>
+                                            
+                                        </td>
+                                     
+                                       
+                                    </tr>
+                                
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- end row -->
+            </div> <!-- end container-fluid -->
+        </div> <!-- end content -->
+    </div>
+    <!-- End Page Content here -->
+
+{% endblock %}
